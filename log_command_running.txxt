@@ -1,7 +1,1 @@
-$SPARK_HOME/bin/spark-submit --packages datastax:spark-cassandra-connector:2.0.1-s_2.11 batch/demo_batch.py
-$SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0,datastax:spark-cassandra-connector:2.0.1-s_2.11 migrate/spark_streaming_kafka.py config.example.yml
-$SPARK_HOME/bin/spark-submit --packages org.mongodb.spark:mongo-spark-connector_2.11:2.2.0 migrate/spark_save_mongo_to_parquet.py
-$SPARK_HOME/bin/spark-submit --driver-class-path postgresql-42.1.1.jar python/postgresql_save_to_file.py config_nsq.yml data/beeketing_top_10/
-
-$SPARK_HOME/bin/spark-shell --conf "spark.mongodb.input.uri=mongodb://127.0.0.1/beeketing.Product?readPreference=primaryPreferred" --packages org.mongodb.spark:mongo-spark-connector_2.11:2.2.0
-db.Product.find({"variants.inventoryPolicy": {$exists: true}}).count()
+$SPARK_HOME/bin/spark-submit --driver-class-path mysql-connector-java-5.1.45-bin.jar --jars mysql-connector-java-5.1.45-bin.jar mysql_import.py --input_path ../../GoogleCluster/task_events/

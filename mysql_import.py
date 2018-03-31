@@ -21,15 +21,15 @@ def load_schema(type_table):
 def main():
     parser = OptionParser()
 
-    parser.add_option("-c", "--config_path", dest="config_path", default=None,
+    parser.add_option("-c", "--config_path", dest="config_path", default="config.yml",
                       help="config_path")
     parser.add_option("-i", "--input_path", dest="input_path", default=None,
                       help="input_path")
     parser.add_option("-t", "--table_name", dest="table_name", default=None,
                       help="config_path")
-    parser.add_option("-m", "--save_mode", dest="save_mode", default=None,
+    parser.add_option("-m", "--save_mode", dest="save_mode", default="append",
                       help="method")
-    parser.add_option("-s", "--sep", dest="sep", default="|",
+    parser.add_option("-s", "--sep", dest="sep", default=",",
                       help="method")
 
     (options, args) = parser.parse_args()

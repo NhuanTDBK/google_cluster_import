@@ -65,7 +65,7 @@ task_usage = StructType([
     StructField("maximum_diskio_time", FloatType(), nullable=True),
     StructField("cycles_per_instructor", FloatType(), nullable=True),
     StructField("memory_access", FloatType(), nullable=True),
-    StructField("sample_portio", FloatType(), nullable=True),
+    StructField("sample_portion", FloatType(), nullable=True),
     StructField("aggregation_type", FloatType(), nullable=True),
     StructField("sampled_cpu_usage", FloatType(), nullable=True),
 

@@ -77,7 +77,8 @@ def main():
 
     logging.info("Loading database")
     if FOLDER_MODE:
-        for file_path in os.listdir(INPUT_PATH):
+        for file_name in os.listdir(INPUT_PATH):
+            file_path = os.path.join(INPUT_PATH, file_name)
             logging.info("loading %s", file_path)
             df = spark_session.read.csv(file_path, load_schema(TABLE_NAME), SEP)
             df.write.mode(SAVE_MODE).format('jdbc').option("url", MYSQL_URI) \

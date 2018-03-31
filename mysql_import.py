@@ -49,7 +49,7 @@ def main():
     SAVE_MODE = options.save_mode
     INPUT_PATH = options.input_path
     SEP = options.sep
-    FOLDER_MODE = options.FOLDER_MODE
+    FOLDER_MODE = options.folder_mode
 
     config = yaml.load(open(CONFIG_PATH))
 

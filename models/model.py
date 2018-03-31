@@ -24,7 +24,7 @@ machine_events = StructType([
 ])
 job_events = StructType([
     StructField("time_id", LongType(), nullable=True),
-    StructField("missing_info", IntegerType, nullable=True),
+    StructField("missing_info", IntegerType(), nullable=True),
     StructField("job_id", LongType(), nullable=True),
     StructField("event_type", StringType(), nullable=True),
     StructField("user", StringType(), nullable=True),

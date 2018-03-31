@@ -1,8 +1,8 @@
 from pyspark.sql.types import *
 
 task_events = StructType([
-    StructField("time_id", LongType()(), nullable=False),
-    StructField("missing_info", IntegerType()(), nullable=False),
+    StructField("time_id", LongType(), nullable=False),
+    StructField("missing_info", IntegerType(), nullable=False),
     StructField("job_id", LongType(), nullable=False),
     StructField("task_index", LongType(), nullable=True),
     StructField("machine_id", LongType(), nullable=True),

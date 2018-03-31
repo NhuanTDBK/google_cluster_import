@@ -10,7 +10,7 @@ import yaml
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 
@@ -51,7 +51,7 @@ def main():
     MYSQL_USERNAME = config['MYSQL']['USERNAME']
     MYSQL_PASSWORD = config['MYSQL']['PASSWORD']
 
-    MYSQL_URI = "jdbc:postgresql://{HOST}:{PORT}/{DBNAME}".format(HOST=MYSQL_HOST,
+    MYSQL_URI = "jdbc:mysql://{HOST}:{PORT}/{DBNAME}".format(HOST=MYSQL_HOST,
                                                                   PORT=MYSQL_PORT,
                                                                   DBNAME=MYSQL_DBNAME)
 

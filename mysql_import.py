@@ -19,9 +19,9 @@ def load_schema(type_table):
         "task_events": task_events,
         "task_constraints": task_constraints,
         "task_usage": task_usage,
-        "job_event": job_events,
+        "job_events": job_events,
         "machine_attributes": machine_attributes,
-        "machine_event": machine_events
+        "machine_events": machine_events
     }
     return mapping_table.get(type_table)
 

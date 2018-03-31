@@ -1,2 +1,5 @@
-$SPARK_HOME/bin/spark-submit --driver-class-path mysql-connector-java-5.1.45-bin.jar --jars mysql-connector-java-5.1.45-bin.jar mysql_import.py --input_path ../../GoogleCluster/task_events/
+$SPARK_HOME/bin/spark-submit --driver-class-path mysql-connector-java-5.1.45-bin.jar
+--jars mysql-connector-java-5.1.45-bin.jar mysql_import.py
+--input_path ../../GoogleCluster/task_events
+--table_name task_events
 find . -name '*.gz' -exec gunzip '{}' \; -print

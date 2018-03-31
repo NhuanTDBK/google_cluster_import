@@ -46,4 +46,26 @@ create table task_constraint(
 	attribute_name varchar(255),
 	attribute_value varchar(255)
 );
+CREATE TABLE `task_usage` (
+  `start_time` bigint(20) DEFAULT NULL,
+  `end_time` bigint(20) DEFAULT NULL,
+  `job_id` bigint(20) DEFAULT NULL,
+  `task_index` bigint(20) DEFAULT NULL,
+  `machine_id` bigint(20) DEFAULT NULL,
+  `cpu_rate` float DEFAULT NULL,
+  `canonical_memory` float DEFAULT NULL,
+  `assigned_memory` float DEFAULT NULL,
+  `ummapped_page_cache` float DEFAULT NULL,
+  `total_page_cache` float DEFAULT NULL,
+  `maximum_memory_usage` float DEFAULT NULL,
+  `disk_io_time` float DEFAULT NULL,
+  `local_disk_space_usage` float DEFAULT NULL,
+  `maximum_cpu_rate` float DEFAULT NULL,
+  `maximum_diskio_time` float DEFAULT NULL,
+  `cycles_per_instructor` float DEFAULT NULL,
+  `memory_access` float DEFAULT NULL,
+  `sample_portion` float DEFAULT NULL,
+  `aggregation_type` tinyint(4) DEFAULT NULL,
+  `sampled_cpu_usage` float DEFAULT NULL
+);
 
